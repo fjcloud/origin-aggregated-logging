@@ -40,7 +40,7 @@ ADD install-gems.sh *.patch.sh *.patch ${HOME}/vendored_gem_src/
 
 RUN cd ${HOME}/vendored_gem_src/ && ./install-gems.sh && cd / && rm -rf ${HOME}/vendored_gem_src/
 
-FROM regsitry.redhat.io/rhel7:latest
+FROM registry.redhat.io/rhel7:latest
 
 ENV DATA_VERSION=1.6.0 \
     FLUENTD_VERSION=1.7.3 \
