@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ruby-25-rhel7:2.5-52 as builder
+FROM registry.redhat.io/rhscl/ruby-25-rhel7:2.5-52 as builder
 
 MAINTAINER OpenShift Development <dev@lists.openshift.redhat.com>
 
