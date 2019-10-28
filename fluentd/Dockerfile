@@ -1,4 +1,4 @@
-FROM rhscl/ruby-25-rhel7:latest as builder
+FROM registry.redhat.iorhscl/ruby-25-rhel7:latest as builder
 
 MAINTAINER OpenShift Development <dev@lists.openshift.redhat.com>
 
@@ -40,7 +40,7 @@ ADD install-gems.sh *.patch.sh *.patch ${HOME}/vendored_gem_src/
 
 RUN cd ${HOME}/vendored_gem_src/ && ./install-gems.sh && cd / && rm -rf ${HOME}/vendored_gem_src/
 
-FROM rhel7:7-released
+FROM rhel7:latest
 
 ENV DATA_VERSION=1.6.0 \
     FLUENTD_VERSION=1.7.3 \
