@@ -1,4 +1,4 @@
-FROM ruby-25-rhel7:latest
+FROM ruby-25-rhel7:latest as builder
 
 MAINTAINER OpenShift Development <dev@lists.openshift.redhat.com>
 
